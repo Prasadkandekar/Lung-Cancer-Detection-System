@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Lungs className="h-8 w-8 text-blue-500" />
-            <span className="text-xl font-bold">LungDetect AI</span>
+            <span className="text-xl font-bold">Lung Cancer Detection</span>
           </Link>
           <div className="flex items-center space-x-4">
             {!isAuthenticated ? (
@@ -37,6 +37,12 @@ const Navbar = () => {
               <>
                 <Link to="/dashboard" className="hover:text-blue-500 transition-colors">
                   Dashboard
+                </Link>
+                <Link to="/process" className="hover:text-blue-500 transition-colors">
+                 Project Process
+                </Link>
+                <Link to="/research" className="hover:text-blue-500 transition-colors">
+                  Project Research
                 </Link>
                 <Link to="/guides" className="hover:text-blue-500 transition-colors">
                   Guides

@@ -9,6 +9,8 @@ import Dashboard from './pages/Dashboard';
 import Team from './pages/Team';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Guides from './pages/Guides';
+import ProjectProcess from './pages/ProjectProcess';
+import Research from './pages/Research';
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useAuth();
@@ -33,7 +35,16 @@ function App() {
                     <Dashboard />
                   </PrivateRoute>
                 }
-              /> <Route
+              />
+              <Route
+                path="/process"
+                element={
+                  <PrivateRoute>
+                    <ProjectProcess />
+                  </PrivateRoute>
+                }
+              />
+               <Route
               path="/guides"
               element={
                 <PrivateRoute>
@@ -41,6 +52,14 @@ function App() {
                 </PrivateRoute>
               }
             />
+              <Route
+                path="/research"
+                element={
+                  <PrivateRoute>
+                   <Research />
+                  </PrivateRoute>
+                }
+              />
               <Route
                 path="/team"
                 element={

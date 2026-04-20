@@ -12,6 +12,7 @@ const Login = () => {
     e.preventDefault();
     login(email, password);
     navigate('/dashboard');
+    3
   };
 
   return (
